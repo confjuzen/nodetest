@@ -8,11 +8,16 @@
     <body>
         <h1>My First Webpageby glitch</h1>
         <p>Hello World! toby</p>
-        <script>
-            fetch("/url");
-          
-        </script>
-    </body>    
+<script>
+  fetch('https://your-project-name.glitch.me/api/data')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('dynamic-content').innerText = data.message;
+    });
+</script>
+
+<div id="dynamic-content">Loading...</div>
+</body>    
 
 
 
